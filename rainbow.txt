@@ -1,0 +1,33 @@
+(5 hex chars = 20 bits)
+pre-pend 27 0s and use as AES key
+to encrypt
+00000000000000000000000000000000
+and get ciphertext
+1) 8de0bcffe587f63ed5c823dcf9bf5131
+2) f7ef413cc51df04abf6872db315e694b
+
+(6 hex chars = 24 bits)
+pre-pend 26 0s and use as AES key
+to encrypt
+00000000000000000000000000000000
+and get ciphertext
+1) ed078d9b527a81fe4725228d88b664ae
+2) ae955b027a3d0cb5401b63b4d26a10ba
+
+
+===================================
+Extra Challenges (TBD pts each)
+===================================
+(6 hex chars = 24 bits)
+pre-pend 26 0s and use as AES key
+to encrypt
+00000000000000000000000000000000
+and get ciphertext
+b8a1c2b0affbf389d6f0fc0584ccefb2
+
+(7 hex chars = 28 bits)
+pre-pend 25 0s and use as AES key
+to encrypt
+00000000000000000000000000000000
+and get ciphertext
+86527077e1cb39b6b2e6f414b1a758f6

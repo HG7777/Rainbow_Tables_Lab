@@ -11,7 +11,7 @@
 - - -
 ###### Will take one command-line argument and generate output to a file rainbow. The argument will be n, the password length (in bits).
 ```
-GenTable n
+./gentable n
 ```
 
 Execution Sequence:

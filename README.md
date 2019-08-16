@@ -1,14 +1,18 @@
 # Rainbow Tables Lab
 
-- ######  Hashing Scheme: An n-bit password p is padded to the left with 128 − n zeros and used as an AES-128 key to encrypt the all-0 plaintext. 
-  - ###### _The result is the hashed password [h(p)]_
-- ###### The attack should use a rainbow table with 2^n/2 chains of 2^n/2 length each.
+> ######  Hashing Scheme: An n-bit password p is padded to the left with 128 − n zeros and used as an AES-128 key to encrypt the all-0 plaintext. 
+  > - ###### _The result is the hashed password [h(p)]_
+> ###### The attack should use a rainbow table with 2^n/2 chains of 2^n/2 length each.
 
 ## [Program Overview]
 
 ### GenTable 
 ###### Corresponds to the preprocessing phase in which a rainbow table will be generated. 
 - - -
+###### Will take one command-line argument and generate output to a file rainbow. The argument will be n, the password length (in bits).
+```
+GenTable n
+```
 
 Execution Sequence:
 - Define structure used to write on the binary file rainbow
@@ -28,9 +32,23 @@ Execution Sequence:
 ### Crack
 ###### Corresponds to the on-line phase in which you are given the hashed password [h(p)] and need to recover p.
 - - -
+###### Will take two command-line arguments and generate output to standard output. The first command-line argument is the same as above. The second argument is h(p) in hex.
+```
+Crack n h(p)
+```
 
 Execution Sequence:
 - Define a similar struct to write on the binary file
 - Calculate the size of the bitmap and create the keys bitmap; as we will keep track of generated keys to avoid collisions
 - Go through the rainbow file looking for a match on the ciphertext; Return true if there is a match, otherwise false
 - If the password is found on the rainbow, we will perform the AES algorithm by reducing the chain until reaching the hash entered as input; as we will count the times it takes to reach that hash
+
+### Reduction Functions 
+###### Source code was used from [AES Source](https://tls.mbed.org/aes-source-code)
+- Advanced Encryption Standard Algorithm
+- Reduction function, reducing a 128 bit key to an n bit key;
+  - Get the first 32 bits of the 128 bit key
+  - Convert hexadecimal values on the char array to character ASCII
+  - Concat. all of them in a single string
+  - Convert the string to an unsigned int number
+

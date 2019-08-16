@@ -1,6 +1,6 @@
 /*
   Harshdeep Goraya
-  Rainbow Tables Proj
+  Rainbow Tables
   ENEE457 : 0101
 */
 

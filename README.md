@@ -34,7 +34,7 @@ Execution Sequence:
 - - -
 ###### Will take two command-line arguments and generate output to standard output. The first command-line argument is the same as above. The second argument is h(p) in hex.
 ```
-Crack n h(p)
+./crack n h(p)
 ```
 
 Execution Sequence:
@@ -58,3 +58,5 @@ Execution Sequence:
 ##### MD5 (128-bit) Checksum
 ![MD5 128-bit Checksum](https://user-images.githubusercontent.com/22339325/63190993-74fc4400-c035-11e9-9928-dc1bcc38f5f7.PNG)
 
+##### Password Extraction
+![Password Extraction](https://user-images.githubusercontent.com/22339325/63191282-213e2a80-c036-11e9-8c98-af9b6282a9a4.PNG)
